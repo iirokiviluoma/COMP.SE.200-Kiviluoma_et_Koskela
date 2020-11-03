@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
-    "coverage": "nyc mocha && cat ./coverage/lcov.info | coveralls"
+    "test:report": "nyc --reporter=text mocha",
+    "test:coveralls": "nyc mocha && cat ./coverage/lcov.info | coveralls"
   },
   "author": "Iiro Kiviluoma & Vesa Koskela",
   "license": "MIT",
