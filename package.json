@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "nyc mocha",
-    "test:report": "nyc --reporter=text mocha"
+    "coverage": "nyc --reporter=text mocha"
   },
   "author": "Iiro Kiviluoma & Vesa Koskela",
   "license": "MIT",

@@ -10,6 +10,6 @@ describe('isBoolean.js', () => {
   })
 
   it('Null returns false', () => {
-    expect(isBoolean(null)).to.equal(true)
+    expect(isBoolean(null)).to.equal(false)
   })
 })
