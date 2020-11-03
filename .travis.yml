@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - node
 script:
-  - nyc mocha && cat ./coverage/lcov.info | coveralls
+  - nyc mocha --reporter mochawesome && cat ./coverage/lcov.info | coveralls
 addons:
   artifacts: true
