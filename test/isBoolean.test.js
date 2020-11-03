@@ -8,4 +8,8 @@ describe('isBoolean.js', () => {
     expect(isBoolean(false)).to.equal(true)
     expect(isBoolean(true)).to.equal(true)
   })
+
+  it('Null returns false', () => {
+    expect(isBoolean(null)).to.equal(true)
+  })
 })

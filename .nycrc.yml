@@ -1,7 +1,5 @@
-all: true
 include:
   - 'src/'
 exclude:
   - 'src/.internal/'
-clean: true
 reporter: [text, lcov]

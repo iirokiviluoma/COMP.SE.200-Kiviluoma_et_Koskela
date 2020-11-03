@@ -2,6 +2,5 @@ language: node_js
 node_js:
   - node
 script:
-  - nyc mocha
-after_success:
-  - nyc report --reporter=text-lcov | coveralls
+  - npm test
+  - nyc report | coveralls
