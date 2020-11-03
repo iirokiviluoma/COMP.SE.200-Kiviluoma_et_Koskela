@@ -2,7 +2,9 @@ language: node_js
 node_js:
   - node
 script:
-  - nyc mocha --reporter mochawesome && cat ./coverage/lcov.info | coveralls
+  - nyc mocha --reporter mochawesome
+after_success:
+  - nyc report --reporter=text-lcov | coveralls
 before_deploy:
   - rm -rf node_modules
 addons:
