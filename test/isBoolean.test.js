@@ -1,15 +1,12 @@
-import chai from 'chai'
 import isBoolean from '../src/isBoolean.js'
 
-const expect = chai.expect
-
 describe('isBoolean.js', () => {
-  it('Booleans return true', () => {
-    expect(isBoolean(false)).to.equal(true)
-    expect(isBoolean(true)).to.equal(true)
+  test('Booleans return true', () => {
+    expect(isBoolean(false)).toBe(true)
+    expect(isBoolean(true)).toBe(true)
   })
 
-  it('Null returns false', () => {
-    expect(isBoolean(null)).to.equal(false)
+  test('Null returns false', () => {
+    expect(isBoolean(null)).toBe(false)
   })
 })

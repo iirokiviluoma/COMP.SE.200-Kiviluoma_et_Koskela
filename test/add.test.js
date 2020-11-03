@@ -1,7 +1,5 @@
-import chai from 'chai'
-
-const expect = chai.expect
-
 describe('Dummy', () => {
-
+  test('Dummy test', () => {
+    expect(1).toBe(1)
+  })
 })
