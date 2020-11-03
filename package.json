@@ -4,15 +4,18 @@
   "description": "COMP.SE.200 Assignment",
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc mocha && cat ./coverage/lcov.info | coveralls"
   },
   "author": "Iiro Kiviluoma & Vesa Koskela",
   "license": "MIT",
-  "dependencies": {
-    "coveralls": "^3.1.0"
-  },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.1.3"
+    "coveralls": "^3.1.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "all": true
   }
 }

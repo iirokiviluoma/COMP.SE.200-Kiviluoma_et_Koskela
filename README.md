@@ -1,6 +1,6 @@
 # COMP.SE.200 Assignment: Kiviluoma & Koskela
 
-TBD...
+[![Coverage Status](https://coveralls.io/repos/github/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela/badge.svg?branch=main)](https://coveralls.io/github/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela?branch=main)
 
 ## (Student template)
 
