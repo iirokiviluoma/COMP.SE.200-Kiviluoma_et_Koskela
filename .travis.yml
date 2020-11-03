@@ -3,3 +3,5 @@ node_js:
   - node
 script:
   - nyc mocha && cat ./coverage/lcov.info | coveralls
+addons:
+  artifacts: true
