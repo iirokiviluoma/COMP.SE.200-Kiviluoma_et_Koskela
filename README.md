@@ -1,5 +1,7 @@
 # COMP.SE.200 Assignment: Kiviluoma & Koskela
 
+[![Build Status](https://travis-ci.com/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela.svg?branch=main)](https://travis-ci.com/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela)
+
 [![Coverage Status](https://coveralls.io/repos/github/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela/badge.svg?branch=main)](https://coveralls.io/github/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela?branch=main)
 
 ## (Student template)

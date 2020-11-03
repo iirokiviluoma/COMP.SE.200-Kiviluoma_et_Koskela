@@ -3,5 +3,6 @@ export default {
   verbose: true,
   collectCoverageFrom: [
     'src/*.js'
-  ]
+  ],
+  coverageReporters: ['lcov']
 }
