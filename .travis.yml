@@ -3,5 +3,8 @@ node_js:
   - node
 script:
   - nyc mocha --reporter mochawesome && cat ./coverage/lcov.info | coveralls
+before_deploy:
+  - rm -rf node_modules
 addons:
   artifacts: true
+    paths: "mochawesome-report"
