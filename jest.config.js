@@ -1,5 +1,7 @@
 export default {
   testEnvironment: 'node',
   verbose: true,
-  testPathIgnorePatterns: []
+  collectCoverageFrom: [
+    'src/*.js'
+  ]
 }
