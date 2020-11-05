@@ -4,5 +4,11 @@ export default {
   collectCoverageFrom: [
     'src/*.js'
   ],
-  coverageReporters: ['lcov', 'text']
+  coverageReporters: ['lcov', 'text'],
+  reporters: [
+    'default',
+    ['./node_modules/jest-html-reporter', {
+      'pageTitle': 'Test Report'
+    }]
+  ]
 }
