@@ -1,5 +1,13 @@
-import isDate from '../src/isDate.js'
+import isDate from '../src/isDate'
 
-test('Dummy test', () => {
-  expect(1).toBe(1)
+test('Valid Date returns true', () => {
+  const d = new Date()
+  expect(isDate(d)).toBe(true)
 })
+
+test('String formed from a Date returns false', () => {
+  const dString = new Date().toString()
+  expect(isDate(dString)).toBe(false)
+})
+
+// TODO: Test isDate.js row 25
