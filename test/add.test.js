@@ -5,11 +5,11 @@ test('Positive integers', () => {
 })
 
 test('Postive and negative integer', () => {
-  expect(add(1,-1).toBe(0))
+  expect(add(1,-1)).toBe(0)
 })
 
 test('Negative integers', () => {
-  expect(add(-1,-1).toBe(-2))
+  expect(add(-1,-1)).toBe(-2)
 })
 
 test('Floating points', () => {
