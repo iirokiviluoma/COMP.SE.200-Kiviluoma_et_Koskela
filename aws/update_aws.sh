@@ -17,15 +17,13 @@ cat > index.html <<- EOM
   <p>This page includes links to test reports made for Tampere University course 'COMP.SE.200 Software Testing'. Testing and the reports were implemented with Jest. Travis CI was used for deployment and from there the generated reports were uploaded to Amazon S3 bucket. This page just contains links to those reports.</p>
   <ul> reports
 EOM
-aws s3 ls s3://comp.se.200 --recursive
 reports=$(aws s3 ls s3://comp.se.200 --recursive | grep 'test-report.html')
-
+printf "$reports"
 while IFS= read -r line; do
     timestamp=$(echo "$line" | awk '{print $1 " " $2}')
     path=$(echo "$line" | awk '{print $NF}') 
-    echo $path
     echo "<li><a href="https://s3.amazonaws.com/comp.se.200/$path">"Build nro "$TRAVIS_BUILD_NUMBER" "$timestamp""</a></li>" >> index.html
-done <<< $reports
+done <<< "$reports"
 
 cat >> index.html <<- EOM
 </ul>
