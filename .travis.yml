@@ -16,7 +16,7 @@ deploy:
   secret_access_key: $ARTIFACTS_SECRET
   bucket: $ARTIFACTS_BUCKET
   local_dir: report  
-  upload-dir: $TRAVIS_BUILD_NUMBER
+  upload-dir: iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela/$TRAVIS_BUILD_NUMBER
   on:
     branch: main
   skip_cleanup: true

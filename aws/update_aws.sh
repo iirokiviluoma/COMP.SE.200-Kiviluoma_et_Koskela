@@ -1,6 +1,9 @@
-aws configure set aws_access_key_id $ARTIFACTS_KEY
-aws configure set aws_secret_access_key $ARTIFACTS_SECRET
+#!/bin/bash
 
+if [ "$USER" = "travis" ]; then
+    aws configure set aws_access_key_id $ARTIFACTS_KEY
+    aws configure set aws_secret_access_key $ARTIFACTS_SECRET
+fi
 
 touch index.html
 
@@ -15,13 +18,13 @@ cat > index.html <<- EOM
   <ul> reports
 EOM
 
-reports=$(aws s3 ls s3://comp.se.200 --recursive | grep 'COMP.SE.200')
+reports=$(aws s3 ls s3://comp.se.200 --recursive | grep 'test-report.html')
 
 IFS=$'\n'
 while IFS= read -r line; do
     timestamp=$(echo "$line" | awk '{print $1 " " $2}')
-    url=$(echo "$line" | awk '{print $NF}') 
-    echo "<li><a href="https://s3.amazonaws.com/comp.se.200/$url">$timestamp</a></li>" >> index.html
+    path=$(echo "$line" | awk '{print $NF}') 
+    echo "<li><a href="https://s3.amazonaws.com/comp.se.200/$path">"Build nro "$TRAVIS_BUILD_NUMBER" "$timestamp""</a></li>" >> index.html
 done <<< $reports
 
 cat >> index.html <<- EOM
