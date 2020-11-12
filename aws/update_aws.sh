@@ -1,3 +1,7 @@
+aws configure set aws_access_key_id $ARTIFACTS_KEY
+aws configure set aws_secret_access_key $ARTIFACTS_SECRET
+
+
 touch index.html
 
 cat > index.html <<- EOM
