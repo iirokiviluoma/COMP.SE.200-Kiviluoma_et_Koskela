@@ -8,3 +8,5 @@ addons:
   artifacts:
     paths:
       - test-report.html
+after_deploy:
+  - bash aws/update_aws.sh
