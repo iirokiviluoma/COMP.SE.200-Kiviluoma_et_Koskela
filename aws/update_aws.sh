@@ -22,7 +22,8 @@ printf "$reports"
 while IFS= read -r line; do
     timestamp=$(echo "$line" | awk '{print $1 " " $2}')
     path=$(echo "$line" | awk '{print $NF}') 
-    echo "<li><a href="https://s3.amazonaws.com/comp.se.200/$path">"Build nro "$TRAVIS_BUILD_NUMBER" "$timestamp""</a></li>" >> index.html
+    build_nro=$(echo "$path" | awk -F "/" '{print $3}')
+    echo "<li><a href="https://s3.amazonaws.com/comp.se.200/$path">"Build nro "$build_nro" "$timestamp""</a></li>" >> index.html
 done <<< "$reports"
 
 cat >> index.html <<- EOM
