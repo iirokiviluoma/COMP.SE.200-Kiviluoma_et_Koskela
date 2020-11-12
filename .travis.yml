@@ -5,11 +5,12 @@ script:
   - npm test
   - npm run coverage
 deploy:
-  all_branches: true
   provider: s3
   access_key_id: $ARTIFACTS_KEY 
   secret_access_key: $ARTIFACTS_SECRET
   bucket: $ARTIFACTS_BUCKET
   glob: "*.html"
+  on:
+    branch: main
 after_deploy:
   - bash aws/update_aws.sh
