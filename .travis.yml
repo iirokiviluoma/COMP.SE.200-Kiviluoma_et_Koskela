@@ -1,15 +1,22 @@
+before_install:
+  - pyenv global 3.7.1
+  - pip install -U pip
+  - pip install awscli
 language: node_js
 node_js:
   - node
 script:
   - npm test
   - npm run coverage
+before_deploy:
+  - mkdir report && mv test-report.html report/test-report.html
 deploy:
   provider: s3
   access_key_id: $ARTIFACTS_KEY 
   secret_access_key: $ARTIFACTS_SECRET
   bucket: $ARTIFACTS_BUCKET
-  glob: "*.html"
+  local_dir: report  
+  upload-dir: $TRAVIS_BUILD_NUMBER
   on:
     branch: main
 after_deploy:
