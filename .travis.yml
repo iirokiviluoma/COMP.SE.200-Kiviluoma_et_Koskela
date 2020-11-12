@@ -19,5 +19,6 @@ deploy:
   upload-dir: $TRAVIS_BUILD_NUMBER
   on:
     branch: main
+  skip_cleanup: true
 after_deploy:
   - bash aws/update_aws.sh
