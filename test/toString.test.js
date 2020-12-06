@@ -5,11 +5,11 @@ test('Number returns the number string', () => {
 })
 
 test('Zero returns it as a string', () => {
-  expect(toString(0)).toBe('')
+  expect(toString(0)).toBe('0')
 })
 
 test('Negative zero returns it as a string', () => {
-  expect(toString(-0)).toBe('')
+  expect(toString(-0)).toBe('-0')
 })
 
 test('Null returns empty string', () => {
