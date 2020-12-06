@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.com/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela.svg?branch=main)](https://travis-ci.com/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela)
 [![Coverage Status](https://coveralls.io/repos/github/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela/badge.svg?branch=main)](https://coveralls.io/github/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela?branch=main)
 
+[Test reports (AWS)](http://comp.se.200.s3-website-us-east-1.amazonaws.com/)
+
 This repo hosts our COMP.SE.200-2020-2021-1 Software Testing assignment code.
 
 ### Kit used
