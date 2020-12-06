@@ -27,6 +27,11 @@ test('Array with start > end', () => {
   expect(slice(arr, 2, 1)).toEqual([])
 })
 
+test('Array with -start > Array.length', () => {
+  const arr = [1, 2, 3, 4, 5]
+  expect(slice(arr, -(arr.length + 1), 1)).toEqual([1])
+})
+
 test('Empty array returns empty array', () => {
   expect(slice([])).toEqual([])
 })
