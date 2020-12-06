@@ -1,8 +1,11 @@
-import isBoolean from '../src/isBoolean.js'
+import isBoolean from '../src/isBoolean'
 
-test('Booleans return true', () => {
-  expect(isBoolean(false)).toBe(true)
+test('true return true', () => {
   expect(isBoolean(true)).toBe(true)
+})
+
+test('false returns true', () => {
+  expect(isBoolean(false)).toBe(true)
 })
 
 test('Null returns false', () => {
