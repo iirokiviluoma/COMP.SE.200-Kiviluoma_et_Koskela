@@ -37,5 +37,5 @@ test('Non number n', () => {
 })
 
 test('Non array', () => {
-  expect(drop(1)).toStrictEqual(undefined)
+  expect(drop(1)).toStrictEqual([])
 })

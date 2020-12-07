@@ -1,4 +1,3 @@
-import defaultTo from '../src/defaultTo'
 import defaultToAny from '../src/defaultToAny'
 
 test('Valid values', () => {

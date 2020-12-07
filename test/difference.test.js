@@ -13,5 +13,5 @@ test('All different', () => {
 })
 
 test('Non array', () => {
-  expect(difference(1, [1,2])).toStrictEqual(undefined)
+  expect(difference(1, [1,2])).toStrictEqual([undefined])
 })
