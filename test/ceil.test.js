@@ -33,7 +33,7 @@ test('Zero, positive precision', () => {
 })
 
 test('Zero, negative precision', () => {
-  expect(ceil(1, -1)).toBe(0)
+  expect(ceil(0, -1)).toBe(0)
 })
 
 test('Increase precision', () => {
@@ -45,6 +45,6 @@ test('Decrease precision', () => {
 })
 
 test('Non integer precision', () => {
-  expect(ceil(1.01, 1.1)).toBe(undefined)
+  expect(ceil(1.01, 1.1)).toBe(NaN)
 })
 
