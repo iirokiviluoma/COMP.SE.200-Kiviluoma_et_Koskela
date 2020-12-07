@@ -6,7 +6,7 @@ test('Integer array and function with one param', () => {
   expect(map(arr, func)).toEqual([4, 8, 12])
 })
 
-test('Array and null returning function returns nulls', () => {
+test('Array and null returning iteratee returns nulls', () => {
   const arr = [1, 2, 3]
   const func = () => null
   expect(map(arr, func)).toEqual([null, null, null])

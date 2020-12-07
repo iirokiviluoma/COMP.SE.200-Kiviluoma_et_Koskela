@@ -1,9 +1,5 @@
 import isEmpty from '../src/isEmpty'
 
-
-import isPrototype from '../src/.internal/isPrototype.js'
-
-
 test('Null returns true', () => {
   expect(isEmpty(null)).toBe(true)
 })
