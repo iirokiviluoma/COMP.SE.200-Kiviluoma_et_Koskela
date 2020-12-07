@@ -12,6 +12,10 @@ test('Empty array', () => {
   expect(drop([])).toStrictEqual([])
 })
 
+test('Null array', () => {
+  expect(drop(null)).toStrictEqual([])
+})
+
 test('n < array.length', () => {
   expect(drop([1,2,3], 2)).toStrictEqual([3])
 })

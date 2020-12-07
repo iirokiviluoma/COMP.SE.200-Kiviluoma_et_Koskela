@@ -12,3 +12,7 @@ test('Empty array', () => {
   expect(every([])).toBe(true)
 })
 
+test('Null array', () => {
+  expect(every(null)).toBe(false)
+})
+
