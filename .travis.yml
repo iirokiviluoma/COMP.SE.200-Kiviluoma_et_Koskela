@@ -8,17 +8,5 @@ node_js:
 script:
   - npm test
   - npm run coverage
-before_deploy:
-  - mkdir report && mv test-report.html report/test-report.html
-deploy:
-  provider: s3
-  access_key_id: $ARTIFACTS_KEY 
-  secret_access_key: $ARTIFACTS_SECRET
-  bucket: $ARTIFACTS_BUCKET
-  local_dir: report  
-  upload-dir: iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela/$TRAVIS_BUILD_NUMBER
-  on:
-    branch: main
-  skip_cleanup: true
-after_deploy:
+after_script:
   - bash aws/update_aws.sh
