@@ -8,7 +8,9 @@ export default {
   reporters: [
     'default',
     ['./node_modules/jest-html-reporter', {
-      'pageTitle': 'Test Report'
+      'pageTitle': 'Test Report',
+      'includeFailureMsg': true,
+      'sort': 'titleAsc'
     }]
   ]
 }
