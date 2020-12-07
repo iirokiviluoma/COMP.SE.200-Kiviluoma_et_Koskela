@@ -5,6 +5,8 @@ if [ "$USER" = "travis" ]; then
     aws configure set aws_secret_access_key $ARTIFACTS_SECRET
 fi
 
+
+
 touch index.html
 
 cat > index.html <<- EOM
