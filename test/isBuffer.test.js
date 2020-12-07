@@ -1,7 +1,7 @@
 import isBuffer from '../src/isBuffer'
 
 test('Valid Buffer returns true', () => {
-  const buffer = Buffer(10)
+  const buffer = Buffer.alloc(10)
   expect(isBuffer(buffer)).toBe(true)
 })
 

@@ -1,5 +1,9 @@
 import isEmpty from '../src/isEmpty'
 
+
+import isPrototype from '../src/.internal/isPrototype.js'
+
+
 test('Null returns true', () => {
   expect(isEmpty(null)).toBe(true)
 })
@@ -34,4 +38,20 @@ test('Object without keys returns true', () => {
 test('Object with some keys returns false', () => {
   const obj = { key: 'value' }
   expect(isEmpty(obj)).toBe(false)
+})
+
+test('Empty set returns true', () => {
+  const set = new Set()
+  expect(isEmpty(set)).toBe(true)
+})
+
+test('Empty map returns true', () => {
+  const map = new Map()
+  expect(isEmpty(map)).toBe(true)
+})
+
+test('Empty prototype returns true', () => {
+  function Proto() {}
+  const testProto = new Proto()
+  expect(isEmpty(testProto.__proto__)).toBe(true)
 })
