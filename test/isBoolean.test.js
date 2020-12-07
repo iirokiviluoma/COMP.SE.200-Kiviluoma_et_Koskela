@@ -11,3 +11,8 @@ test('false returns true', () => {
 test('Null returns false', () => {
   expect(isBoolean(null)).toBe(false)
 })
+
+test('Object boolean returns true', () => {
+  const obj = new Object(true)
+  expect(isBoolean(obj)).toBe(true)
+})
