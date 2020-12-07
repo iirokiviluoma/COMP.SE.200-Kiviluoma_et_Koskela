@@ -44,5 +44,6 @@ test('Object with valueOf-string returns NaN', () => {
   const obj = {
     valueOf: 'test'
   }
+  
   expect(toNumber(obj)).toBe(NaN)
 })

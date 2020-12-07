@@ -17,8 +17,8 @@ test('Object with integer values and sum function', () => {
   expect(reduce(obj, sumFunc, 0)).toBe(6)
 })
 
-test('Null returns the accumulator', () => {
+test('Null returns the starting accumulator', () => {
   const sumFunc = (n, m) => n + m
   const ans = 42
-  expect(reduce(null, sumFunc, 42))
+  expect(reduce(null, sumFunc, ans)).toBe(ans)
 })

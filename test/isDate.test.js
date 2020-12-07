@@ -10,4 +10,16 @@ test('String formed from a Date returns false', () => {
   expect(isDate(dString)).toBe(false)
 })
 
-// TODO: Test isDate.js row 25
+test('Object returns false', () => {
+  const obj = { key: 'value' }
+  expect(isDate(obj)).toBe(false)
+})
+
+test('Null returns false', () => {
+  expect(isDate(null)).toBe(false)
+})
+
+test('Function returns false', () => {
+  const func = () => null
+  expect(isDate(func)).toBe(false)
+})
