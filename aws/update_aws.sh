@@ -5,7 +5,7 @@ if [ "$USER" = "travis" ]; then
     aws configure set aws_secret_access_key $ARTIFACTS_SECRET
 fi
 
-aws s3 cp test-report.html s3://iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela/$TRAVIS_BUILD_NUMBER
+aws s3 cp test-report.html s3://comp.se.200/iirokiviluoma/COMP.SE.200-Kiviluoma_et_Koskela/$TRAVIS_BUILD_NUMBER
 
 touch index.html
 
